@@ -1,0 +1,349 @@
+*{
+    box-sizing: border-box;
+
+}
+:root{
+    --main-color:#10cab7;
+    --sec-color:#2c4755;
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+}
+/* to the top button  */
+.swap{
+    width: 35px;
+    height: 35px;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    bottom: 0;
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    margin: 0 15px 20px 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.swap span{
+   color: white;
+   font-size: 20px;
+   font-weight: 700;
+   cursor: pointer;
+
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+    padding-top: 4px;
+}
+
+.logo img{
+    width: 60px;
+    cursor: pointer;
+}
+.links{
+    position: relative;
+    height: 40px;
+    z-index: 1;
+}
+.icon{
+    display: flex;
+    width: 30px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    cursor: pointer;
+
+}
+
+.icon:hover span:nth-child(2){
+    width: 100%;
+    transition: 0.5s;
+}
+
+.icon span{
+    background-color: black;
+    margin-bottom: 4px;
+
+}
+.icon span:first-child{
+    width: 100%;
+    height: 3px;
+}
+.icon span:nth-child(2){
+    width: 60%;
+    height: 3px;
+}
+.icon span:last-child{
+    width: 100%;
+    height: 3px;
+}
+.links ul{
+width: 150px;
+height: 100px;
+background-color: #EEE;
+position: absolute;
+right: 0;
+top: -10px;
+padding-top: 4px;
+display: none;
+}
+.links:hover ul{
+    display: block;
+    transition: 0.6s;
+}
+.links ul::before{
+    content: "";
+    border: 10px solid ;
+    border-color:transparent transparent #EEE transparent;
+    position: absolute;
+    top: -20px;
+    right: 3px;
+}
+.links ul li{
+    width: 150px;
+    list-style: none;
+    text-decoration: none;
+    padding-top: 4px;
+    margin-left: -40px;
+    text-align: center;
+}
+.links ul li a:hover{
+    padding-left: 10px;
+    transition: 0.5s;
+}
+.links ul li a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+.links ul li:not(:last-child){
+    border-bottom: 1px solid black;
+}
+.landing{
+    background-image: url("30\ Cool\ &\ Easy\ Things\ to\ Draw\ to\ Get\ Better\ at\ Art.png");
+    background-size: cover;
+    height: calc(100vh - 28px - 40px);
+    position: relative;
+
+}
+.welcome_text{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.welcome_text h3{
+    color:var(--main-color);
+    letter-spacing: 3px;
+    text-align: center;
+}
+.welcome_text p{
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+/*Services start*/
+
+
+.special-header{
+    font-size: 40px;
+    font-weight: 800;
+    color: #ebeced;
+    text-align: center;
+}
+.special-p{
+    font-size: 14px;
+    text-align: center;
+    margin-top: -14px;
+}
+/*Services end*/
+@media (min-width:500px){
+    .container{
+        width: 500px;
+    }
+}
+@media (min-width:750px){
+    .container{
+        width: 730px;
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        width: 1100px;
+    }
+}
+@media (min-width:970px){
+    .container{
+        width: 960px;
+    }
+}
+.features .container{
+    padding-top: 40px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+.features .container .feat{
+    text-align: center;
+    padding: 20px;
+}
+.features .container .feat i{
+ color: var(--main-color);
+}
+.features .container .feat h2{
+    font-weight: 800;
+   }
+   .features .container .feat p{
+    line-height: 20px;
+   }
+
+.services .container .serv{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    text-align: center;
+}
+
+.services .container .serv i{
+color: var(--main-color);
+}
+.services .container .serv p{
+    color: gray;
+}
+.Portfolio{
+    padding-top: 20px;
+    background-color: rgba(245, 245, 245, 0.799);
+}
+.Portfolio .Portfolio-contain{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+}
+.Portfolio .card{
+    margin: 20px;
+    box-shadow: 0 0 10px 0 rgb(197, 194, 194);
+    
+}
+.Portfolio .card img{
+    width: 100%;
+    height: 200px;
+}
+.Portfolio .card h3{
+    text-transform: capitalize;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+.Portfolio .card p{
+    color: gray;
+    line-height: 1.6;
+    padding: 0 5px;
+}
+/* About Us Section*/
+.about{
+    margin-top: 20px;
+    padding-bottom: 40px;
+
+}
+.about .about-contain{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 40px;
+}
+.about .about-contain .image{
+  width:40%;
+  height: 200px;
+  position: relative;
+}
+.about .about-contain .image::after{
+    content: "";
+    position: absolute;
+    height: 154px;
+    width: 20px;
+    border-left: 40px solid var(--main-color);
+    border-bottom: 38px solid var(--main-color);
+    top: -16px;
+    left: calc(100% - 20px);
+    z-index: -1;
+}
+.about .image img{
+    max-width: 100%;
+    height: 100%;
+}
+.about .about-contain .text{
+    width: 40%;
+    margin-left: 100px;
+}
+.about .about-contain .text .one{
+    font-size: 18px;
+    font-weight: 600;
+}
+.about .about-contain .text .two{
+    color: gray;
+}
+.about .about-contain .text hr{
+    background-color: var(--main-color);
+    height: 3px;
+    width: calc(100% - 20%);
+}
+@media (min-width:970px){
+    .about .about-contain .image::after{
+        left: calc(100% - 84px);
+    }
+}
+/* contact */
+.contact{
+    padding-top: 20px;
+    background-color:rgba(245, 245, 245, 0.799); ;
+}
+.contact .mail
+{
+    padding-top: 20px;
+    text-align: center;
+    display: block;
+}
+.contact .mail label{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--sec-color);
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.contact .mail a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--main-color);
+    margin-top: 10px;
+}
+.contact .social{
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.contact .social p{
+   margin-right: 10px;
+}
+.contact .social i{
+    margin-top: 16px;
+    margin-right: 10px;
+    color: var(--sec-color);
+}
+/* footer  */
+.footer{
+    background-color: var(--sec-color);
+    text-align: center;
+    margin: 0;
+}
+.footer p{
+    color: white;
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+.footer span{
+    color: var(--main-color);
+}
